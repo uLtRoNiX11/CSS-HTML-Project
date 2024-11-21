@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>InstaBook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .hover-effect {
+            font-size: 2em;
+            color: #ffffff;
+            transition: color 0.3s ease, transform 0.3s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hover-effect:hover {
+            color: #5ebc67; 
+            transform: translateY(-10px); 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        }
+
+        .hover-effect h1 {
+            color: black;
+            transform: translateY(-10px);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: color 0.3s ease, transform 0.3s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-section {
+            background-color: #5ebc67;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); 
+            backdrop-filter: blur(10px); 
+            padding: 20px;
+            border-radius: 10px;
+            color: white; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover; 
+            margin: 135px 0;
+        }
+
+        .navbar {
+            background-color: rgb(255, 255, 255); 
+            padding: 10px 0; 
+            text-align: center; 
+            position: relative; 
+            z-index: 10; 
+            width: 100%;
+        }
+
+        .logo img {
+            max-width: 200px; 
+            height: auto; 
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 5000px; 
+            text-align: center; 
+        }
+
+        .form-container h2 {
+            color: black; 
+            margin-bottom: 20px; 
+        }
+
+        .form-container label {
+            color: black;
+        }
+
+        .input-color {
+            color: black; 
+            margin-right: 10px; 
+        }
+
+        .form-group input[type="radio"] {
+            display: none; 
+        }
+
+        .form-group label {
+            position: relative;
+            padding-left: 30px; 
+            cursor: pointer;
+            color: black; 
+        }
+
+        .form-group label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px; 
+            height: 20px; 
+            border: 2px solid black; 
+            border-radius: 50%; 
+            background: white; 
+        }
+
+        .form-group input[type="radio"]:checked + label:before {
+            background: black; 
+        }
+
+        .form-buttons {
+            margin-top: 20px; 
+        }
+
+        .form-buttons input {
+            padding: 10px 15px; 
+            margin: 0 10px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1em; 
+        }
+
+        .form-buttons input[type="submit"] {
+            background-color: #5ebc67; 
+            color: white; 
+        }
+
+        .form-buttons input[type="reset"] {
+            background-color: #ff6666; 
+            color: white; 
+        }
+
+        .contact-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+        .contact-section img {
+            max-width: 150px; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            color: black; 
+            margin: 5px 0; 
+        }   
+        
+        .header-section h1 {
+            color: #ffffff; /* Initial color */
+            transition: color 0.3s ease, transform 0.3s ease; /* Transition for smooth effect */
+        }
+
+        .header-section h1:hover {
+            color: black; /* Change color to black on hover */
+            transform: translateY(-5px); /* Slight upward movement on hover */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add text shadow on hover */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif; 
+            background: url('background.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src ="instabook-high-resolution-logo-transparent.png" alt="Website Logo">
+        </div>
+    </nav>
+    <div class="header-section">
+        <h1 class="hover-effect">Welcome to InstaBook</h1>
+        <p>Your go-to platform for sharing and discovering amazing stories. Join us to connect with friends and explore new adventures!</p>
+    </div>
+    <div class="content">
+        <div class="form-container">
+            <h2 class="hover-effect">REGISTRATION</h2>
+            <form action="mailto:jhishnu.dev@gmail.com" method="post">
+                <label for="fname"><b><i>Enter First Name :</i></b></label>
+                <br>
+                <input type="text" name="fname" id="fname" placeholder="Enter First Name">
+                <br>
+                <br>
+                <label for="lname"><b><i>Enter Last Name :</i></b></label>
+                <br>
+                <input type="text" name="lname" id="lname" placeholder="Enter Last Name">
+                <br>
+                <br>
+                <label for="email"><b><i>Enter Email ID :</i></b></label>
+                <br>
+                <input type="text" name="email" id="email" placeholder="Enter Email ID">
+                <br>
+                <br>
+                <label for="ph"><b><i>Enter Phone Number :</i></b></label>
+                <br>
+                <div class="form-group">
+                    <select class="country-code" name="country_code" id="country_code">
+                        <option value="empty">......</option>
+                        <option value="+1">🇺🇸 United States +1</option>
+                        <option value="+44">🇬🇧 United Kingdom +44</option>
+                        <option value="+91">🇮🇳 India +91</option>
+                        <option value="+61">🇦🇺 Australia +61</option>
+                    </select>
+                    <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+                </div>
+                <br>
+                <label for="gender"><b><i>Please Select Your Gender :</i></b></label>
+                <br>
+                <div class="form-group">
+                    <input type="radio" name="gender" value="male" id="gender-male" class="input-color">
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender" value="female" id="gender-female" class="input-color">
+                    <label for="gender-female">Female</label>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <h2 class="hover-effect">SELECT YOUR COUNTRY AND LOCATION</h2>
+                <label for="country"><b><i>Choose a country :</i></b></label>
+                <br>
+                <select id="country" name="country">
+                    <option value="empty">......</option>
+                    <option value="AF">🇦🇫 Afghanistan - Band-e Amir National Park</option>
+                    <option value="AL">🇦🇱 Albania - Theth National Park</option>
+                    <option value="AR">🇦🇷 Argentina - Quebrada de Humahuaca</option>
+                    <option value="AU">🇦🇺 Australia - Lord Howe Island</option>
+                    <option value="AT">🇦🇹 Austria - Hallstatt</option>
+                    <option value="BT">🇧🇹 Bhutan - Paro Taktsang (Tiger's Nest)</option>
+                    <option value="BR">🇧🇷 Brazil - Lençóis Maranhenses National Park</option>
+                    <option value="CA">🇨🇦 Canada - Gros Morne National Park</option>
+                    <option value="CL">🇨🇱 Chile - Valle de Elqui</option>
+                    <option value="CO">🇨🇴 Colombia - Caño Cristales</option>
+                    <option value="HR">🇭🇷 Croatia - Plitvice Lakes National Park</option>
+                    <option value="GE">🇬🇪 Georgia - Kazbegi National Park</option>
+                    <option value="IS">🇮🇸 Iceland - Landmannalaugar</option>
+                    <option value="IN">🇮🇳 India - Spiti Valley</option>
+                    <option value="IT">🇮🇹 Italy - Matera</option>
+                    <option value="JP">🇯🇵 Japan - Naoshima Island</option>
+                    <option value="MA">🇲🇦 Morocco - Chefchaouen</option>
+                    <option value="NZ"> 🇳🇿 New Zealand - Fiordland National Park</option>
+                    <option value="PT">🇵🇹 Portugal - Azores</option>
+                    <option value="GB">🇬🇧 Scotland - Isle of Skye</option>
+                    <option value ="ZA">🇿🇦 South Africa - Drakensberg Mountains</option>
+                    <option value="ES">🇪🇸 Spain - Ronda</option>
+                    <option value="SE">🇸🇪 Sweden - Gotland</option>
+                    <option value="TR">🇹🇷 Turkey - Cappadocia</option>        
+                    <option value="VN">🇻🇳 Vietnam - Ha Giang</option>
+                </select>
+                <br>
+                <br>
+                <label for="payment"><b><i>Select Payment Method :</i></b></label>
+                <br>
+                <select id="payment" name="payment">
+                    <option value="empty">......</option>
+                    <option value="net-banking">Net Banking</option>
+                    <option value="paytm">PayTM</option>
+                    <option value="cash">Cash</option>
+                    <option value="emi">EMI</option>
+                </select>
+                <br>
+                <br>
+                <div class="form-buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+            <br>
+            <hr>
+            <br>
+            <div class="contact-section">
+                <img src="instabook-high-resolution-logo-transparent.png" alt="Contact Logo">
+                <p><strong>Contact Us:</strong></p>       
+                <p><b>Email :</b><br>
+                    sahana.200912@gmail.com<br>
+                    shakthishadhana2009@gmail.com<br>
+                    jhishnu.dev@gmail.com<br>
+                </p>        
+                <p><b>Phone :</b><br>
+                    +91 86959-22200<br>
+                    +91 73054-88812<br>
+                    +91 96000-98427<br>
+                </p>        
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
